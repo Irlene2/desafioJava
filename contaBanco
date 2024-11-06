@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class ContaTerminal {
+
+    public static void main(String[] args) {
+        // Criação do scanner para ler dados do terminal
+        Scanner scanner = new Scanner(System.in);
+        
+        // Solicitação dos dados da conta ao usuário
+        System.out.print("Digite o número da conta: ");
+        int numero = scanner.nextInt();  // Recebe o número da conta (inteiro)
+        
+        scanner.nextLine(); // Limpar o buffer após ler um número
+        
+        System.out.print("Digite o número da agência (formato 000-0): ");
+        String agencia = scanner.nextLine();  // Recebe o número da agência (texto)
+        
+        System.out.print("Digite o nome do cliente: ");
+        String nomeCliente = scanner.nextLine();  // Recebe o nome do cliente (texto)
+        
+        System.out.print("Digite o saldo da conta: ");
+        double saldo = scanner.nextDouble();  // Recebe o saldo da conta (decimal)
+        
+        // Exibindo os dados da conta
+        System.out.println("\n--- Dados da Conta ---");
+        System.out.println("Número da Conta: " + numero);
+        System.out.println("Agência: " + agencia);
+        System.out.println("Nome do Cliente: " + nomeCliente);
+        System.out.println("Saldo: R$ " + saldo);
+        
+        // Fechar o scanner
+        scanner.close();
+    }
+}
